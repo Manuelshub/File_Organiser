@@ -35,3 +35,19 @@ func CheckAndCreateFolder(path string) error {
 	}
 	return nil
 }
+
+// CreateDirectory creates a directory and appends it to the user path
+func CreateDirectory(dir string) (string, error) {
+	// create each directory that files with different extension would be saved in
+	downloads, err := Downloads("~/Downloads")
+	if err != nil {
+		log.Panic(err)
+		return dir, err
+	}
+	newPath := downloads + "/" + dir
+	if err = CheckAndCreateFolder(newPath); err != nil {
+		return "", err
+	}
+	log.Printf("%s Path: %s", dir, newPath)
+	return newPath, nil
+}

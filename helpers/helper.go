@@ -25,3 +25,13 @@ func Downloads(dir string) (string, error) {
 	log.Println("Downloads PATH:", downloads)
 	return downloads, nil
 }
+
+// CheckAndCreateFolder checks if a folder exists, if it does not it creates it.
+func CheckAndCreateFolder(path string) error {
+	if _, err := os.Stat(path); os.IsNotExist(err) {
+		if err = os.Mkdir(path, 0750); err != nil {
+			return err
+		}
+	}
+	return nil
+}

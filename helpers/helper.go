@@ -51,3 +51,14 @@ func CreateDirectory(dir string) (string, error) {
 	log.Printf("%s Path: %s", dir, newPath)
 	return newPath, nil
 }
+
+// Contains checks if a string is contained in a given slice of string
+func Contains(slice []string, item string) bool {
+	for _, s := range slice {
+		if s == item {
+			return true
+		}
+	}
+
+	return false
+}

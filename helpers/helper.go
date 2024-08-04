@@ -44,7 +44,7 @@ func CreateDirectory(dir string) (string, error) {
 		log.Panic(err)
 		return dir, err
 	}
-	newPath := downloads + "/" + dir
+	newPath := filepath.Join(downloads, dir)
 	if err = CheckAndCreateFolder(newPath); err != nil {
 		return "", err
 	}

@@ -6,7 +6,19 @@ This is my version of a file organiser in Golang. This program was designed to h
 
 ## How to Use
 
-Ensure that you have `go` installed on your machine so as to enable you run the program. Clone the `File Organiser` repo from the github URL [https://github.com/Manuelshub/File_Organiser/tree/main](https://github.com/Manuelshub/File_Organiser/tree/main). Open up the repo and run the program with the go run main.go command.
+1. **Ensure go is installed**:
+Make sure that you have `go` installed on your machine so as to enable you run the program. You can download and install it from the [official Go website](https://golang.org/dl/). 
+
+2. **Clone the repo**:
+Clone the `File Organiser` repo from the github URL [https://github.com/Manuelshub/File_Organiser/tree/main](https://github.com/Manuelshub/File_Organiser/tree/main). 
+
+3. **Go into the repo locally**:
+Open up the repo and run the program with the go run main.go command.
+
+4. **Run the program**:
+```bash
+go run main.go
+```
 
 ## Prerequisities
 

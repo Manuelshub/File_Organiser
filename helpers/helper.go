@@ -1,6 +1,7 @@
 package helpers
 
 import (
+	"log"
 	"os"
 	"path/filepath"
 )
@@ -12,4 +13,15 @@ func Expand(path string) (string, error) {
 	}
 	homeDir, _ := os.UserHomeDir()
 	return filepath.Join(homeDir, path[1:]), nil
+}
+
+// Downloads expands the home directory '~' and appends the downloads folder to it.
+func Downloads(dir string) (string, error) {
+	downloads, err := Expand(dir)
+	if err != nil {
+		log.Panic(err)
+		return "", err
+	}
+	log.Println("Downloads PATH:", downloads)
+	return downloads, nil
 }
